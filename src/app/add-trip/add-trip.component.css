@@ -1,0 +1,19 @@
+agm-map {
+    height: 400px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.submit{
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.distance{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.check{
+    padding-left: 10px;
+}

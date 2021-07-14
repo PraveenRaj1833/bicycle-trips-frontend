@@ -1,0 +1,27 @@
+<div class="container">
+        <h2>Add a new Trip</h2>
+        {{email}}
+        <div class="form-group">
+            <label>starting Point</label>
+            <input type="text" class="form-control" placeholder="Enter starting point (or choose on map)" autocapitalize="off" spellcheck="false" #search [(ngModel)]="trip.startingPoint">
+        </div>
+        <div class="form-group">
+            <label>Farthest Point</label>
+            <input type="text" class="form-control" placeholder="Enter Farthest point (or choose on map)" autocapitalize="off" spellcheck="false" #search1 [(ngModel)]="trip.farthestPoint">
+        </div>
+        <div class="m-2">
+            <agm-map [latitude]="latitude" [longitude]="longitude" (mapReady)="mapReadyHandler($event)" class="mb-5">
+                <!-- <agm-marker [latitude]="latitude" [longitude]="longitude" ></agm-marker> -->
+                <!-- <agm-direction [origin]="origin" [destination]="destination" mode="Bike"></agm-direction> -->
+            </agm-map>
+        </div>
+        <div class="form-group distance">
+            <label >Distance (in KM)</label>
+            <input name="distance" type="text" class="form-control ml-2" disabled [value]="trip.back?distance*2:distance"> 
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" name="back" [(ngModel)]="trip.back">
+            <label class="form-check-label check"> Did you ride back to destination?</label>
+        </div>
+        <button type="submit" class="submit" (click)="addTrip()">submit</button>
+</div>

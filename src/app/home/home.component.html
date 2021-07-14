@@ -1,0 +1,31 @@
+<div class="container">
+    <h2 class="text-center">Bicycling Ride Tracker </h2>
+    <div class="row p-5">
+        {{email}}
+        <button class="btn btn-primary float-right m-3" (click)="addTrip()">Add a Trip</button>
+        <button class="btn btn-primary float-right m-3" (click)="logout()">Logout</button>
+    </div>
+    
+    <hr>
+    <table class="table table-striped table-hover  table-bordered border-primary">
+        <thead>
+            <tr>
+                <th scope="col">Trip Id</th>
+                <th scope="col">Starting Point</th>
+                <th scope="col">Farthest Point</th>
+                <th scope="col">Reverse</th>
+                <th scope="col">Total Distance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let trip of userModel.trips">
+                <td>{{trip.tripId}}</td>
+                <td>{{trip.startingPoint}}</td>
+                <td>{{trip.farthestPoint}}</td>
+                <td>{{trip.back==true?"Yes":"No"}}</td>
+                <td>{{trip.distance}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

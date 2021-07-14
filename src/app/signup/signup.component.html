@@ -1,0 +1,27 @@
+<div class="">
+    <h1 class="text-center">Sign Up </h1>
+    <hr>
+    {{userModel | json}}
+    <div>
+        <form class="mx-auto" (ngSubmit)="handleSubmit()">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="name" class="form-control" [(ngModel)]="userModel.name">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" name="email" class="form-control" [(ngModel)]="userModel.email">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="text" name="password" class="form-control" [(ngModel)]="userModel.password">
+            </div>
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="text" name="confirmPassword" class="form-control" [(ngModel)]="userModel.confirmPassword">
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</div>
+
