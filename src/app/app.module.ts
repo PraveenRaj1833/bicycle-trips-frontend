@@ -26,7 +26,7 @@ import { AgmCoreModule } from '@agm/core';
     FormsModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey : 'AIzaSyDJLS-fzvFluJgNAc2dvisEGdVsJcBsDH4',
+      apiKey : '',
       libraries : ['places','geometry']
     })
   ],
